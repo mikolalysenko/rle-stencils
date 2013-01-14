@@ -1,0 +1,19 @@
+{
+  "name": "rle-stencils",
+  "version": "0.0.0",
+  "description": "Stencils for use with rle library",
+  "main": "stencils.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/rle-stencils.git"
+  },
+  "keywords": [
+    "stencil",
+    "narrowband",
+    "levelset"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "41b5fa5b369a8894a6196fdea2efce0e94daead5"
+}
