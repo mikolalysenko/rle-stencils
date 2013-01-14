@@ -32,7 +32,39 @@ function lp(p, radius_) {
   return result;
 }
 
-exports.lp         = lp;
-exports.moore      = moore;
-exports.vonNeumann = lp.bind(this, 1);
-exports.ball       = lp.bind(this, 2);
+
+//Special stencils for 
+var CROSS_STENCIL       = [ [0,0,0] ]
+  , CUBE_STENCIL        = [ ];
+
+(function() {
+  //Build surface stencil
+  for(var i=0; i<8; ++i) {
+    var p = [0,0,0];
+    for(var j=0; j<3; ++j) {
+      if((i & (1<<j)) !== 0) {
+        p[j] = -1;
+      }
+    }
+    CUBE_STENCIL.push(p);
+  }
+})();
+
+(function() {
+  //Build cross
+  for(var i=0; i<3; ++i) {
+    for(var s=-1; s<=1; s+=2) {
+      var p = [0,0,0];
+      p[i] = s;
+      CROSS_STENCIL.push(p);
+    }
+  }
+})();
+
+//Export stencils
+exports.lp            = lp;
+exports.moore         = moore;
+exports.vonNeumann    = lp.bind(this, 1);
+exports.ball          = lp.bind(this, 2);
+exports.CROSS_STENCIL = CROSS_STENCIL;
+exports.CUBE_STENCIL  = CUBE_STENCIL;
