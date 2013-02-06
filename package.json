@@ -1,6 +1,6 @@
 {
   "name": "rle-stencils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Stencils for use with rle library",
   "main": "stencils.js",
   "repository": {
