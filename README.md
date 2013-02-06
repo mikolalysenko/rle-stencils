@@ -1,7 +1,6 @@
 rle-stencils
 ============
-Stencil generator code for the rle libraries
-
+Code to generate stencils for the [rle level set processing libraries](https://github.com/mikolalysenko/rle-all).
 
 Basic Usage
 ===========
@@ -10,9 +9,8 @@ To install the library, just do:
 
     npm install rle-stencils
     
-Then in your code you can import the stencils by:
+Then in your code you can import the stencil generators using:
 
-    //Import stencil library
     var stencils = require('rle-stencils');
 
 Example: Moore
