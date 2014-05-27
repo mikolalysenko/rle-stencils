@@ -25,7 +25,7 @@ function lp(p, radius_) {
   for(var i=-radius; i<=radius; ++i) {
     for(var j=-radius; j<=radius; ++j) {
       for(var k=-radius; k<=radius; ++k) {
-        if(Math.pow(Math.abs(i), p) + Math.pow(Math.abs(i), p) + Math.pow(Math.abs(i), p) <= rp) {
+        if(Math.pow(Math.abs(i), p) + Math.pow(Math.abs(j), p) + Math.pow(Math.abs(k), p) <= rp) {
           result.push(i);
           result.push(j);
           result.push(k);
@@ -37,7 +37,7 @@ function lp(p, radius_) {
 }
 
 
-//Special stencils for 
+//Special stencils for
 var CUBE_STENCIL;
 (function() {
   var cube = []
